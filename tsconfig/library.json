@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    // Library build settings
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    // Output directory
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    // Module format for libraries
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    // Target ES2020 for wider compatibility
+    "target": "ES2020",
+    "lib": ["ES2020"],
+
+    // Composite for project references
+    "composite": true,
+
+    // Strip internal types from public API
+    "stripInternal": true,
+
+    // Remove comments from output
+    "removeComments": true,
+
+    // Import helpers from tslib to reduce bundle size
+    "importHelpers": true,
+
+    // Ensure consistent casing
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**"
+  ]
+}

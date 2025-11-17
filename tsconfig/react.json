@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    // React JSX support
+    "jsx": "react-jsx",
+
+    // Include DOM types
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Module resolution for React
+    "moduleResolution": "Bundler",
+
+    // Paths for common React patterns
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}

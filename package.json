@@ -1,0 +1,97 @@
+{
+  "name": "@styleguide/config",
+  "version": "1.0.0",
+  "description": "Reusable ESLint, Prettier, Vitest, and TypeScript configurations",
+  "type": "module",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "prettier",
+    "prettier-config",
+    "vitest",
+    "vitest-config",
+    "typescript",
+    "tsconfig",
+    "react",
+    "nextjs",
+    "node"
+  ],
+  "exports": {
+    "./eslint/base": "./eslint/configs/base.js",
+    "./eslint/typescript": "./eslint/configs/typescript.js",
+    "./eslint/react": "./eslint/configs/react.js",
+    "./eslint/nextjs": "./eslint/configs/nextjs.js",
+    "./eslint/node": "./eslint/configs/node.js",
+    "./eslint/import": "./eslint/configs/import.js",
+    "./eslint/naming-convention": "./eslint/configs/naming-convention.js",
+    "./eslint/eslint-comments": "./eslint/configs/eslint-comments.js",
+    "./eslint/profiles/react": "./eslint/profiles/react.js",
+    "./eslint/profiles/nextjs": "./eslint/profiles/nextjs.js",
+    "./eslint/profiles/node": "./eslint/profiles/node.js",
+    "./prettier": "./prettier/index.js",
+    "./vitest/base": "./vitest/base.js",
+    "./vitest/react": "./vitest/react.js",
+    "./vitest/node": "./vitest/node.js",
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/react.json": "./tsconfig/react.json",
+    "./tsconfig/nextjs.json": "./tsconfig/nextjs.json",
+    "./tsconfig/node.json": "./tsconfig/node.json",
+    "./tsconfig/library.json": "./tsconfig/library.json"
+  },
+  "files": [
+    "eslint",
+    "prettier",
+    "vitest",
+    "tsconfig",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-no-barrel-files": "^1.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@next/eslint-plugin-next": {
+      "optional": true
+    },
+    "vitest": {
+      "optional": true
+    },
+    "prettier": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@next/eslint-plugin-next": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-no-barrel-files": "^1.2.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/styleguide.git"
+  },
+  "author": "Your Name",
+  "homepage": "https://github.com/yourusername/styleguide#readme"
+}
