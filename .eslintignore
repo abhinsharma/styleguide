@@ -1,0 +1,6 @@
+dist
+build
+.next
+out
+storybook-static
+node_modules

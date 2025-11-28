@@ -1,0 +1,46 @@
+{
+  "name": "@abhsh/styleguide",
+  "version": "1.0.0",
+  "description": "Shared ESLint v9 config and TSConfig profiles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhinsharma/styleguide.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./profiles/*": "./profiles/*.js",
+    "./rules/*": "./script/lint-rules/*.js",
+    "./tsconfig/*.json": "./tsconfig/*.json",
+    "./tsconfig/web/*.json": "./tsconfig/web/*.json",
+    "./tsconfig/node/*.json": "./tsconfig/node/*.json"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "react",
+    "nextjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^15.5.6",
+    "@typescript-eslint/eslint-plugin": "^8.48.0",
+    "@typescript-eslint/parser": "^8.48.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-unicorn": "^56.0.1"
+  }
+}
