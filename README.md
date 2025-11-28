@@ -1,6 +1,6 @@
 # @abhsh/styleguide
 
-Shared ESLint v9 config and TSConfig profiles.
+Shared ESLint, TSConfig, and Prettier configs.
 
 ## Install
 
@@ -73,3 +73,12 @@ export default [
   "include": ["src"]
 }
 ```
+
+## Prettier
+
+```js
+// prettier.config.js
+export { default } from '@abhsh/styleguide/prettier.config.js';
+```
+
+Settings: `printWidth: 200`, `singleQuote: true`, `semi: true`
