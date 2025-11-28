@@ -21,7 +21,6 @@ export default [
       'no-nested-ternary': 'error',
       'no-useless-call': 'error',
       'no-unneeded-ternary': 'error',
-      'no-console': 'error',
       'no-constant-binary-expression': 'error',
       'no-promise-executor-return': 'error',
       'no-template-curly-in-string': 'error',

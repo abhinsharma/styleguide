@@ -10,13 +10,13 @@ import typescript from '../script/lint-rules/typescript.js';
 import unicorn from '../script/lint-rules/unicorn.js';
 
 export default [
+  {
+    ignores: ['build/', 'dist/', 'lib/', 'node_modules/', '*.config.js', '*.config.mjs', '*.config.ts'],
+  },
   ...bestPractices,
   ...comments,
   ...naming,
   ...typescript,
   ...unicorn,
   prettier,
-  {
-    ignores: ['build/', 'dist/', 'lib/', 'node_modules/'],
-  },
 ];

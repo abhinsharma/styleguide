@@ -12,6 +12,9 @@ import typescript from '../script/lint-rules/typescript.js';
 import unicorn from '../script/lint-rules/unicorn.js';
 
 export default [
+  {
+    ignores: ['build/', 'dist/', 'node_modules/', 'storybook-static/', '*.config.js', '*.config.mjs', '*.config.ts'],
+  },
   ...barrel,
   ...bestPractices,
   ...comments,
@@ -20,7 +23,4 @@ export default [
   ...unicorn,
   ...react,
   prettier,
-  {
-    ignores: ['build/', 'dist/', 'node_modules/', 'storybook-static/'],
-  },
 ];

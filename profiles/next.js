@@ -12,15 +12,22 @@ import react from '../script/lint-rules/react.js';
 import typescript from '../script/lint-rules/typescript.js';
 import unicorn from '../script/lint-rules/unicorn.js';
 
+const baseIgnores = ['.next/', 'out/', 'build/', 'dist/', 'node_modules/', '**/*.config.js', '**/*.config.mjs', '**/*.config.ts'];
+const baseFiles = ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.mts', '**/*.cts'];
+
 export default [
-  ...barrel,
-  ...bestPractices,
-  ...comments,
-  ...naming,
-  ...typescript,
-  ...unicorn,
-  ...react,
   {
+    ignores: baseIgnores,
+  },
+  ...barrel.map((c) => ({ ...c, files: baseFiles })),
+  ...bestPractices.map((c) => ({ ...c, files: baseFiles })),
+  ...comments.map((c) => ({ ...c, files: baseFiles })),
+  ...naming.map((c) => ({ ...c, files: c.files || baseFiles })),
+  ...typescript,
+  ...unicorn.map((c) => ({ ...c, files: baseFiles })),
+  ...react.map((c) => ({ ...c, files: ['**/*.tsx', '**/*.jsx'] })),
+  {
+    files: baseFiles,
     plugins: {
       '@next/next': next,
     },
@@ -31,7 +38,4 @@ export default [
     },
   },
   prettier,
-  {
-    ignores: ['.next/', 'out/', 'build/', 'dist/', 'node_modules/'],
-  },
 ];

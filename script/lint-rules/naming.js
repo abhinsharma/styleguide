@@ -9,6 +9,17 @@ export default [
       unicorn,
     },
     rules: {
+      'unicorn/filename-case': [
+        'error',
+        {
+          case: 'kebabCase',
+        },
+      ],
+    },
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    rules: {
       '@typescript-eslint/no-redundant-type-constituents': 'error',
       '@typescript-eslint/no-unnecessary-qualifier': 'error',
       '@typescript-eslint/prefer-regexp-exec': 'error',
@@ -32,6 +43,10 @@ export default [
           trailingUnderscore: 'allow',
         },
         {
+          selector: 'function',
+          format: ['camelCase', 'PascalCase'],
+        },
+        {
           selector: 'typeLike',
           format: ['PascalCase'],
         },
@@ -46,12 +61,6 @@ export default [
         {
           selector: 'import',
           format: ['camelCase', 'PascalCase'],
-        },
-      ],
-      'unicorn/filename-case': [
-        'error',
-        {
-          case: 'kebabCase',
         },
       ],
     },

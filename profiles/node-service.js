@@ -11,20 +11,14 @@ import typescript from '../script/lint-rules/typescript.js';
 import unicorn from '../script/lint-rules/unicorn.js';
 
 export default [
+  {
+    ignores: ['build/', 'dist/', 'node_modules/', '*.config.js', '*.config.mjs', '*.config.ts'],
+  },
   ...barrel,
   ...bestPractices,
   ...comments,
   ...naming,
   ...typescript,
   ...unicorn,
-  {
-    rules: {
-      // Node-specific: allow console for logging
-      'no-console': 'off',
-    },
-  },
   prettier,
-  {
-    ignores: ['build/', 'dist/', 'node_modules/'],
-  },
 ];

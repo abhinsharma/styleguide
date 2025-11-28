@@ -6,10 +6,12 @@ import tsparser from '@typescript-eslint/parser';
 
 export default [
   {
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    ignores: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
-        project: true,
+        projectService: true,
       },
     },
     plugins: {
