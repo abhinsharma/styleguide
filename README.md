@@ -1,6 +1,6 @@
 # @abhsh/styleguide
 
-Shared ESLint, TSConfig, and Prettier configs.
+Shared ESLint, TSConfig, and Prettier configs for personal projects.
 
 ## Install
 
