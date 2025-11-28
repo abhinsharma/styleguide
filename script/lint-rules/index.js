@@ -1,6 +1,7 @@
 /**
  * Individual rule sets for custom composition
  */
+export { default as barrel } from './barrel.js';
 export { default as bestPractices } from './best-practices.js';
 export { default as comments } from './comments.js';
 export { default as naming } from './naming.js';
