@@ -11,7 +11,7 @@
   "exports": {
     ".": "./index.js",
     "./profiles/*": "./profiles/*.js",
-    "./rules/*": "./script/lint-rules/*.js",
+    "./rules/*": "./lint-rules/*.js",
     "./tsconfig/*.json": "./tsconfig/*.json",
     "./tsconfig/web/*.json": "./tsconfig/web/*.json",
     "./tsconfig/node/*.json": "./tsconfig/node/*.json",

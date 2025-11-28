@@ -3,11 +3,11 @@
  */
 import prettier from 'eslint-config-prettier';
 
-import bestPractices from '../script/lint-rules/best-practices.js';
-import comments from '../script/lint-rules/comments.js';
-import naming from '../script/lint-rules/naming.js';
-import typescript from '../script/lint-rules/typescript.js';
-import unicorn from '../script/lint-rules/unicorn.js';
+import bestPractices from '../lint-rules/best-practices.js';
+import comments from '../lint-rules/comments.js';
+import naming from '../lint-rules/naming.js';
+import typescript from '../lint-rules/typescript.js';
+import unicorn from '../lint-rules/unicorn.js';
 
 export default [
   {
