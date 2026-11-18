@@ -1,7 +1,7 @@
 {
   "name": "@abhsh/styleguide",
   "version": "1.0.0",
-  "description": "Shared ESLint v9 config and TSConfig profiles",
+  "description": "Shared ESLint, Oxlint, Oxfmt, Prettier, and TypeScript configurations",
   "repository": {
     "type": "git",
     "url": "https://github.com/abhinsharma/styleguide.git"
@@ -15,10 +15,14 @@
     "./tsconfig/*.json": "./tsconfig/*.json",
     "./tsconfig/web/*.json": "./tsconfig/web/*.json",
     "./tsconfig/node/*.json": "./tsconfig/node/*.json",
-    "./prettier.config.js": "./prettier.config.js"
+    "./prettier.config.js": "./prettier.config.js",
+    "./oxlint.json": "./oxlint.json",
+    "./oxfmt.json": "./oxfmt.json"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:ox": "oxlint --config oxlint.json .",
+    "format:check": "oxfmt --config oxfmt.json --check ."
   },
   "keywords": [
     "eslint",
@@ -33,17 +37,24 @@
   "peerDependencies": {
     "eslint": "^9.0.0",
     "prettier": "^3.0.0",
-    "typescript": "^5.0.0"
+    "typescript": ">=5.9 <6.1"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
-    "@next/eslint-plugin-next": "^15.5.6",
-    "@typescript-eslint/eslint-plugin": "^8.48.0",
-    "@typescript-eslint/parser": "^8.48.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.8.1",
+    "@next/eslint-plugin-next": "^16.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.71.1",
+    "@typescript-eslint/parser": "^8.71.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-barrel-files": "^3.0.1",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-unicorn": "^56.0.1"
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-unicorn": "^65.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "typescript": "~6.0.3",
+    "prettier": "^3.9.10",
+    "oxlint": "^1.87.0",
+    "oxfmt": "^0.72.0"
   }
 }
