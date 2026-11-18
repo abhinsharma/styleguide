@@ -83,3 +83,14 @@ export { default } from '@abhsh/styleguide/prettier.config.js';
 
 Settings: `printWidth: 200`, `singleQuote: true`, `semi: true`
 # test ci
+
+## Oxlint and Oxfmt
+
+The existing ESLint profiles remain available. For Oxlint and Oxfmt, use the exported configurations:
+
+```bash
+oxlint --config node_modules/@abhsh/styleguide/oxlint.json src
+oxfmt --config node_modules/@abhsh/styleguide/oxfmt.json src
+```
+
+Install `oxlint` and `oxfmt` in each consuming project. The formatter uses the same width, quotes, and semicolons as the Prettier configuration. Type-aware and framework-specific rules in the ESLint profiles still require ESLint.
