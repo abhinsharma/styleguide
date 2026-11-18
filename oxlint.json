@@ -1,0 +1,8 @@
+{
+  "$schema": "https://oxc.rs/schema.json",
+  "plugins": ["typescript", "react", "unicorn"],
+  "categories": {
+    "correctness": "error"
+  },
+  "ignorePatterns": ["node_modules/**", "dist/**", "build/**", ".next/**"]
+}
