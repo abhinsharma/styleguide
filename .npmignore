@@ -1,0 +1,7 @@
+.claude/
+.cursor/
+.github/
+.npm-cache/
+scripts/
+node_modules/
+pnpm-lock.yaml
